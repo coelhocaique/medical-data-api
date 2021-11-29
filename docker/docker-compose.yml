@@ -1,0 +1,16 @@
+medical-data-api:
+  image: coelhocaique/medical-data-api
+  container_name: medical-data-api
+  environment:
+    - "IP_ADDRESS=192.168.3.12"
+  ports:
+    - "8000:8000"
+
+medical-data-postgres:
+  image: coelhocaique/medical-data-postgres
+  container_name: medical-data-postgres
+  environment:
+    - "POSTGRES_USER=medical-data"
+    - "POSTGRES_PASSWORD=medical-data"
+  ports:
+    - "5432:5432"
